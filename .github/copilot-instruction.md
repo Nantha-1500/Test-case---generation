@@ -36,8 +36,6 @@ If multiple requirement files exist:
 - Merge related business rules.
 
 - Avoid duplicate test cases.
-
-- If unrelated documents are found, mention it in outputs/CLARIFICATIONS_REQUIRED.md.
  
 ---
  
@@ -67,11 +65,13 @@ When reading .docx files:
  
 If this file exists, use it as a reference:
  
-templates/Manual_TestCase_Reference_Format.xlsx
+templates/testcase-template.xlsx
  
 Use the reference template for:
 
 - Test case depth
+  
+- Test Steps should proper and realtime naviagation.
 
 - Writing style
 
@@ -130,16 +130,6 @@ Think like:
 - Business Analyst
 
 - End User
-
-- Negative Tester
- 
-Do not assume undefined business logic unless it is a standard industry validation. If assumptions are used, mention them in the Comments column or CLARIFICATIONS_REQUIRED.md.
- 
-If any requirement is unclear:
-
-Create/update:
-
-outputs/CLARIFICATIONS_REQUIRED.md
  
 ---
  
@@ -151,11 +141,7 @@ outputs/
  
 Main output:
 
-GENERATED_TEST_CASES.xlsx
- 
-Additional output:
-
-CLARIFICATIONS_REQUIRED.md
+MSME-BASE-Test-Cases_V1.xlsx
  
 ---
  
@@ -214,18 +200,6 @@ Generate test cases for:
 - Successful stage movements
 
 - Successful integrations
- 
-## Negative Scenarios
-
-- Invalid inputs
-
-- Missing mandatory fields
-
-- Invalid workflow actions
-
-- Invalid permissions
-
-- Failed integrations
  
 ## Validation Scenarios
 
@@ -400,6 +374,8 @@ Target behavior:
   "The system should..."
  
 - Test steps should be clearly numbered.
+
+- Screen Name should properly mentioned.
  
 Example:
  
@@ -592,9 +568,6 @@ Mention:
 - Clarifications required
 
 - Assumptions made
- 
-Also update:
 
-outputs/CLARIFICATIONS_REQUIRED.md
 
 if any unclear requirements exist.
