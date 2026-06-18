@@ -1,0 +1,13 @@
+- Complete field listings are referenced as "attached" for multiple screens (e.g., Customer Details, Existing Exposure with Our Bank, Proposed Facility, Document Details, Security Detail, Exposure Norms, Guarantees, Due Diligence, Pricing), but those detailed field documents are not available in the repository. Exact mandatory flags, field lengths, and format constraints must be confirmed.
+- OTP validity duration and maximum OTP retry attempts are not explicitly defined. Confirm configured expiry window and retry threshold for Change Password and Forgot Password flows.
+- Lockout threshold text includes both explicit "3 times" and generic "configured times". Confirm final lock policy and unlock mechanism messaging.
+- NTB co-applicant/guarantor onboarding is marked "on hold". Confirm whether this flow should be disabled in scope or moved to a future release.
+- Delegation of powers matrix thresholds and exact role-routing combinations are not provided. Confirm requested/proposed amount bands and final routing mapping for Branch vs MLP.
+- Security valuation integration with the external valuation platform "Velocity" and title-search integration with the external legal-risk platform "Adverse Risk" depend on pending API specs and templates. Confirm final request payloads, response handling, and fallback behavior.
+- Security coverage logic is marked as pending business confirmation. Confirm exact formulas for primary/collateral/customer/total coverage and rounding rules.
+- Value of Account and Exposure Norms mention potential API integration pending bank confirmation. Confirm whether release scope is manual entry only or hybrid fetch + manual.
+- External rating requires bank-approved agency/category/instrument master values, but approved lists are not provided. Confirm master data source and validation rules.
+- Score Card inputs are pending MSME department inputs. Confirm whether score card is in scope for this release and provide field-level definitions.
+- Deviation sanction behavior is marked as product limitation pending discussion. Confirm final sanction gating rules when any deviation is rejected.
+- Committee approval flow references a separate screen but no details are available. Confirm screen fields, role permissions, and workflow transition conditions.
+- CGTMSE push from Account Handoff is mentioned without API contract and response handling details. Confirm enablement rule, payload mapping, and retry/error handling requirements.
