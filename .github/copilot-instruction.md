@@ -54,8 +54,6 @@ When reading .docx files:
 
 - Use headings, numbering, bullet points, and table content as requirement inputs.
 
-- If images or screenshots contain business rules that cannot be read clearly, mention them in CLARIFICATIONS_REQUIRED.md.
-
 - Do not ignore tables in the document.
 
 - Use tables as important business rule sources.
@@ -275,7 +273,17 @@ Generate test cases for:
 - Cross-module validations
 
 - Multi-stage workflow validations
- 
+
+## Negative Scenarios
+
+- Successful workflows
+
+- Valid user inputs
+
+- Successful stage movements
+
+- Successful integrations
+
 ---
  
 # Detailed Coverage Expansion Rule
