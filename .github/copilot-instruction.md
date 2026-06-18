@@ -10,6 +10,9 @@ The generated test cases must include:
 
 - Positive scenarios
 - Regression scenarios
+- Negative scenarios
+- Validation scenarios
+- Workflow scenarios
  
 ---
  
