@@ -490,8 +490,6 @@ Priority Guidelines:
  
 Use for:
 
-- Clarifications
-
 - Dependency notes
 
 - Environment notes
@@ -503,36 +501,6 @@ Use for:
 - Assumptions
 
 - Special execution conditions
- 
----
- 
-# Clarification Handling Rule
- 
-Do not stop test case generation only because clarification points exist.
- 
-If requirement details are missing:
-
-- Generate test cases using reasonable assumptions.
-
-- Mention the assumptions in the Comments column.
-
-- Add the missing points in outputs/CLARIFICATIONS_REQUIRED.md.
- 
-Raise clarification points only for:
-
-- Critical business logic gaps
-
-- Missing workflow decisions
-
-- Missing role-permission rules
-
-- Missing integration behavior
-
-- Missing calculation/score logic
-
-- Missing mandatory compliance behavior
- 
-Avoid excessive clarification points for standard industry validations.
  
 ---
  
@@ -575,8 +543,6 @@ Mention:
 - Scenario types covered
 
 - Business rules identified
-
-- Clarifications required
 
 - Assumptions made
 
