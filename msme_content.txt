@@ -1,0 +1,721 @@
+6. SysArc Infomatix Pvt Ltd
+7. LENDperfect – MSME BASE SRS
+9. Prepared by: SysArc Infomatix Pvt Ltd
+10. Submission Date:
+11. Version: V.1.0
+12. Request from:
+20. Preamble
+21. This document is prepared by SysArc Infomatix Pvt Ltd. SysArc Infomatix Pvt Ltd. reserves the right to amend any portion of this document at any time. This document is marked as confidential and provided for internal use in connection with SysArc’s services only. All information contained in the document is proprietary and confidential and all rights therein are reserved with SysArc Infomatix Pvt Ltd. Client shall not disclose this document to any third party other than the intended receiver. Use of this document is subject to the terms and conditions in force with SysArc.  By receiving/downloading this document, the client expressly acknowledges and accepts this disclaimer.
+22. Document Revision History
+23. Table of Contents
+24. 1	Introduction	1
+25. 2	Accessing to LENDperfect application	1
+26. 2.1	Business case for Accessing the application	1
+27. 2.1.1	User Login- LENDperfect- application	1
+28. 2.1.2	Change Password	2
+29. 2.1.3	Forget Password	5
+30. 3	Home Screen	7
+31. 3.1	Inbox Section	8
+32. 4	Inbox	8
+33. 4.1	Processing Inbox	9
+34. 4.1.1	Inbox	9
+35. 4.1.2	Group Inbox	10
+36. 4.1.3	Team Inbox	11
+37. 5	Existing Proposal Search	11
+38. 5.1	Field Level validation	11
+39. 6	Create Application and Other Integration	12
+40. 6.1.1	Branch Officer-Initiated MSME Loan Application: Workflow Handling	13
+41. 7	Party Details	15
+42. 7.1	Customer Details Page	15
+43. 7.1.1	Scenario adding the co-applicant/guarantor who is Existing to Bank	16
+44. 7.1.2	Scenario for adding the co-applicant/guarantor who is ETB	17
+45. 7.1.3	Scenario adding the co-applicant/guarantor who is NTB	18
+46. 7.1.4	Field Listing for Customer Details page	18
+47. 7.2	List of Directors	18
+48. 7.2.1	Proposed Screen for List of Directors / Partners/ Trustee / Members	18
+49. 7.2.2	Proposed Screen for CIBIL Score of Directors	18
+50. 7.2.3	Proposed Screen for Corporate Guarantors	19
+51. 7.3	Share Holding Pattern	19
+52. 8	Proposed Data Entry	20
+53. 8.1	Existing Exposure with Our Bank	20
+54. 8.1.1	Field Listing and Validation for the Existing Exposure with Our Bank	22
+55. 8.2	Existing Exposure with Other Bank	22
+56. 8.2.1	Field Listing for Existing Exposure with Other Bank	23
+57. 8.3	Proposed Facility Details	23
+58. 8.3.1	Field Listing and Validation for the Proposed Exposure	23
+59. 8.4	Document Details	23
+60. 8.4.1	Field Listing and Validation for the Document details	24
+61. 8.5	Security Detail	24
+62. 8.5.1	Field Listing and Validation for Security Detail page	27
+63. 8.6	Security Coverage	27
+64. 8.7	Value of account	29
+65. 8.7.1	Field Listing and Validation for Value of account	29
+66. 8.8	Business Updates	29
+67. 8.9	Credit Updates	30
+68. 8.10	Exposure Norms	30
+69. 8.10.1	Field Listing and Validation for Exposure Norms	31
+70. 8.11	Personal and Corporate Guarantee	31
+71. 8.11.1	Field Listing and Validation for Personal and Corporate Guarantee	32
+72. 8.12	Consortium and Share holding pattern of Loans	32
+73. 8.12.1	Field Listing for MBA and Consortium Proposed Facility Details	34
+74. 8.13	Evaluation of Industry	34
+75. 8.14	Comments on Operation/Overdue	35
+76. 8.15	Group Company Operations	36
+77. 8.15.1	Field Listing and Validation for the Group Company Operations	36
+78. 8.16	Current Account with Other Bank	36
+79. 9	Financials	37
+80. 9.1	Financial Indicator/Ratios	37
+81. 9.2	Financial Comments	38
+82. 9.3	Group Company Financials	38
+83. 10	Assessment	39
+84. 10.1	Facility Based Assessment.	39
+85. 10.2	Term Loan Assessment	40
+86. 10.2.1	Field Level Validation	41
+87. 10.3	Manual Assessment	43
+88. 10.4	DSCR	44
+89. 11	Rating	44
+90. 11.1	External Rating	45
+91. 11.2	Score Card	46
+92. 11.3	Capital Cost	46
+93. 11.4	RAROC	47
+94. 12	Verifications	47
+95. 12.1.1	Due Diligence for Property	47
+96. 12.1.2	Due Diligence for Borrower	48
+97. 12.1.3	Pre Inspection Report	49
+98. 13	Compliance	51
+99. 13.1	General Compliances	51
+100. 13.2	Other Comments	52
+101. 14	Query	53
+102. 14.1	Query History	53
+103. 14.2	Raise Query	53
+104. 15	Decision Making	54
+105. 15.1	Terms & Conditions	54
+106. 15.2	Pricing/Business Approval	56
+107. 15.2.1	Field Listing and Validation for pricing page/business approval	56
+108. 15.3	Deviation	57
+109. 15.4	Proposal Recommendation	58
+110. 15.4.1	Sanction Letter Preparation	60
+111. 15.4.2	Sanction Letter Generation	61
+112. 15.5	Workflow & Approval	61
+113. 15.5.1	Screen Functionality	61
+114. 15.6	Workflow History	64
+115. 15.7	Post Sanction Documentation	64
+116. 15.7.1	Post Sanction Documentation Flow	65
+117. 15.8	Account Handoff	66
+121. About SysArc
+122. Founded in 1997, with industry strength and experience in the financial and banking sector. We develop world-class banking solutions - primarily focused on effective implementation of the business process, cutting down on operating expenses, reducing processing time and increasing customer satisfaction multi-fold. We have expanded into the financial services software arena, with the same dedication to excellence to be a touchstone of the corporate culture. We do not simply produce software. we create innovative solutions that allow the customers to outperform their competitors.
+123. Acknowledgments
+124. The documentation team along with Subject Matter Experts (SMEs) have contributed towards the creation of this document. This document has been a team effort with each member providing their inputs and suggestions for improvement so that the document meets End-User requirements. The team consists of Senior Technical Writer, Subject Matter Expert and unnamed countless other members who have made this approach document possible.
+125. Document Conventions
+126. The normal font used in the document is Cambria.
+127. The main pages are divided into chapters. Each chapter starts with Heading 1.
+128. The sub-pages are further divided into sections and subsections are represented as Heading 1.1, through Heading 1.1.1.1.1
+129. The steps involved to navigate through the application are provided in Bullet points. Sometimes the bullet points may have sub-levels of steps. Each level will display different Bullet points.
+130. The information that needs emphasis is in Bold Fonts. It may represent the page name, field name, drop-down, checkbox, radio buttons, links, or action buttons.
+131. The content “Bolded and inserted within Quotes” represents the pre-set options or list values that you may select from one of the various control fields. E.g.: “Yes”, “No”.
+132. A note inserted in the document at relevant places is represented with (bulb icon) at relevant locations.
+133. Any References will be represented with  (book icon) at relevant locations.
+134. Any Warning message is represented with  (alert icon) at relevant locations.
+135. Any Alert messages are represented with  (alert icon) at relevant locations.
+136. Any Hyperlink is represented in with normal font in blue color, bolded, underlined and italicized and displays as “Hyperlink”
+138. Introduction
+139. This document outlines the proposed solution for implementing MSME functionalities in the <BANK NAME> LENDperfect system. It has been prepared based on discussions with the BANK team.
+140. A gap analysis was conducted to understand the bank’s current lending systems and processes. The findings from this analysis have been documented and referred to while preparing this Software Requirement Specification (SRS) document. Based on the approval of this document and further clarifications from the bank, SysArc will commence development.
+141. Accessing to LENDperfect application
+142. This section explains bank users accessing of LENDperfect application.
+143. Business case for Accessing the application
+144. Bank users will access the LENDperfect application strictly via the internal bank network through a URL provided by the DIT team. The system supports secure user login using existing credentials, validated against the bank’s authentication database.
+145. LENDperfect also offers robust credential management, including features for:
+146. User Login with IP logging and session tracking (Refer to User Loan)
+147. Password Change, validated via OTP sent to registered mobile and email (Refer to Change Password)
+148. Forget Password with OTP-based verification and password policy enforcement (minimum 8 characters, alfa numeric, and at least one uppercase character) ( Refer to Forget Password)
+149. These features are fully aligned with the bank’s IT security. They ensure secure access while empowering users to manage their credentials independently.
+150. User Login- LENDperfect- application
+151. As per bank guidelines, applications can be accessed only through the bank’s internal website. The Bank DIT team will provide the URL, which needs to be configured by the development team.
+152. Users must manually enter the approved URL provided by the DIT team.
+153. The login screen allows authorized branch users to access the LENDperfect system. Users can log in using their existing user ID and password. Upon entering their credentials, the system will validate the details and grant access if the entered information is correct. Otherwise, the system will display an error.
+154. Positive Scenario: Successful Login
+155. User Action:
+156. The user enters the approved URL in the browser and accesses the login screen.
+157. The user provides a valid User ID and Password on the login screen.
+158. Backend System Computation:
+159. The system validates the entered credentials against the bank’s authentication database.
+160. If the credentials are correct, access is granted.
+161. User Access Granted:
+162. The user is redirected to the Home Screen of the LENDperfect application.
+163. Security Confirmation:
+164. The system logs the successful login, capturing details such as:
+165. IP address
+166. Timestamp
+167. User session details
+168. Negative Scenario: Login Failure
+169. User Action:
+170. The user enters the approved URL and attempts to log in.
+171. Backend System Computation Error:
+172. The system fails to validate the User ID or Password due to incorrect credentials.
+173. The user attempts login with an expired or deactivated account.
+174. Access Denied:
+175. The system displays an error message:
+176. “Invalid credentials. Please try again, with valid credentials.”
+177. Logging and Monitoring:
+178. The system logs the failed login attempt, capturing:
+179. IP address
+180. Timestamp
+181. Error details
+182. Account Lock:
+183. If the login attempt is wrong for 3 times for invalid password, then account gets locked, user needs to contact administrator manually for unlocking.
+184. The system locks the users in accessing the application if the tries for set configured times.
+185. Change Password
+186. User Actions:
+187. Enter Username – The user provides their registered User Name.
+188. Enter Old Password – The user inputs their current password for authentication.
+189. Enter New Password – The user types in a new password, following security guidelines.
+190. Confirm New Password – The user re-enters the new password to avoid mistakes.
+191. Click "OK" – The system processes the password change request.
+192. Enters :- System will
+193. Click "Close" – If the user does not wish to proceed, they can exit the screen.
+194. System Validations:
+195. Ensure the Old Password matches the one stored in the system.
+196. Validate that the New Password meets security policies (e.g., length, special characters, etc.).
+197. Confirm that New Password and Confirm Password match.
+198. If all conditions are met, update the password and show a success message.
+199. If any condition fails, display an error message (e.g., "Passwords do not match" or "Invalid old password").
+200. Ensure the new password meets the bank’s security policies. As per the Bank policy minimum of 8 characters and password should contain Alfa numeric case with 1 character in upper case.
+201. A 6-digit OTP code will be generated by Lendperfect and sent to the bank user's registered mobile number and email ID
+202. Suggested SMS and Email template.
+203. Positive and Negative Scenarios for Change Password
+205. Forget Password
+206. User Actions:
+207. Enter Username – The user provides their registered Username.
+208. Generate OTP – Clicking the "Generate OTP" button sends an OTP to the user's registered mobile number.
+209. Enter OTP – The user inputs the received OTP.
+210. Verify OTP – Clicking the "Verify" button validates the OTP.
+211. If valid, the user proceeds to reset the password.
+212. If invalid, an error message is displayed.
+213. Resend OTP – If the OTP is not received or has expired, the user can click "Resend" to generate a new one.
+214. Enter New Password – The user types in a new password, ensuring it meets security policies.
+215. Confirm New Password – The user re-enters the new password to avoid mistakes.
+216. Submit – Clicking "Submit" updates the password if all validations passed.
+217. Close – Clicking "Close" exits the password reset process.
+218. System Validations:
+219. Ensure the Username exists in the system.
+220. Validate the OTP before allowing a password reset.
+221. Check that New Password and Confirm Password match.
+222. Ensure the new password meets the bank’s security policies. As per the Bank policy minimum of 8 characters and password should contain Alfa numeric case with at least 1 character in upper case.
+223. If successful, the system updates the password and displays a success message.
+224. A 6-digit OTP code will be generated by Lendperfect and sent to the bank user's registered mobile number and email ID.
+225. Suggested SMS and Email template.
+227. Positive and Negative Scenarios for Forgot Password
+228. Home Screen
+229. The user lands on the Home Screen page after Successful login. All the four modules with LENDperfect system is displayed. Ease of Access to application user to go directly to proposal they are working on recently.
+230. Recent Applications:
+231. Recent Applications list down last three applications that the user had recently worked on, based on the application opened/accessed by respective login user from date stamp logic.
+232. Circular details / Helpdesk number will be based on Bank definition from Setup.
+233. Dashboard:
+234. Dashboard is quick access; this page will be enabled for Users having Group Rights (Supervisory Grade) to see the overall applications and status.
+235. A set of users will be grouped under defined User Groups (e.g., Processing Officer, Approver, Admin, etc.).
+236. Access to specific pages and functionalities within the system will be granted based on the group to which the user belongs.
+237. For example:
+238. Processing Officer Group:
+239. Has limited access rights.
+240. Permitted actions include:
+241. Create New Application.
+242. Restricted from accessing approval workflows or administrative functions.
+243. Each logo will redirect Users to respective modules to which the User has rights to access, controlled from Admin level.
+244. Below each logos (Retail, Agri, MSME, and Corporate) there will be running number that will capture the Location wise User Statistics towards usage of LENDperfect system and it will be denoted with color logics as follows Approved Applications (Green) / Pending (Orange) / Rejection (red).
+245. Left top menu will display the details of User logged in.
+246. All the other navigation menu will as per access privileges of the user.
+247. Navigation Access Overview
+248. The software platform's home screen is divided into two main sections:
+249. Dashboard
+250. The Dashboard is common across all users. It provides quick access to:
+251. Processing Inbox: Displays applications assigned for user action.
+252. Query Inbox: Displays queries or tasks pending user clarification or input.
+253. Left Panel
+254. This panel is designed to support user-based control aligned with the organizational verticals. It is further divided into:
+255. Supervisory Panel: Contains high-level functions such as Reports and monitoring tools, typically assigned to supervisory or managerial roles.
+256. Process Panel: Includes operational actions such as:
+257. Create MSME Application
+258. Purpose and Role-Based Access
+259. For example, an Special Officer should have access only to the "Create MSME Proposal" function. This ensures that the admin can configure and restrict Left Panel access based on the User Group and Vertical (Domain/Department), enforcing secure and relevant navigation control for each role. Same applies for the Other vertical. MLP officer cannot have access to create Agri Application.
+260. Inbox Section
+261. The Inbox section is displayed in the center of the Home screen. The following are the various inboxes to be incorporated for <BANK NAME> LENDperfect application.
+262. Processing Inbox
+263. Inbox
+264. Group Inbox
+265. Team Inbox
+266. Query Inbox
+267. Received
+268. Resolved
+269. Raised
+270. For detailed explanation on the above inboxes, refer to the following section.
+271. Inbox
+272. The Inbox section on the Home screen displays various inboxes based on the accessibility rights of the logged-in user. LENDperfect is configured with major inboxes through which the proposal application flows to-and-fro between various users/user groups starting from initial proposal creation till the loan sanction. The following are the various inboxes available:
+273. Processing Inbox
+274. Query Inbox
+275. Processing Inbox
+276. Processing inbox allows the user to access the applications pushed from the branches/field officers/Marketing Officer for processing the loan applications. The application is received into:
+277. Inbox (individual user-specific)
+278. Group Inbox
+279. Team Inbox
+280. Inbox
+281. The Inbox displays the list of proposals which the logged-in user is current working on. The user can find the details of each application by clicking on the corresponding Proposal No. The recent proposals created by the users are listed on top of the list based on the date when the proposal is created.
+282. The following are the scenarios handled in the Inbox.
+283. Once the user initiates new proposal creation by clicking the Create Application, the corresponding proposal will be moved to the Inbox.
+284. When the user picks the proposal from Group Inbox, the system auto pushes the proposal to Inbox of the logged-in user.
+285. If the proposal is directly forwarded from another user to the logged-in user, that proposal will be listed in the user inbox.
+286. Examples
+287. New Proposal Creation
+288. Scenario: User clicks Create Application.
+289. Example:
+290. User: Amit Sharma
+291. Action: Clicks “Create Application” for Proposal Reference Number will be generated.
+292. System Result: A new Proposal No. MSME/0071/202526 is generated and appears at the top of Amit’s Inbox.
+293. Amit Forward the application from the workflow and approval page to the Next Hierarchy.
+294. Proposal Picked from Group Inbox
+295. Scenario:  Amit has forwarded to a workflow where MLP assistant manager group which is configured.
+296. Example:
+297. When the MLP Assistant Manager logs in, they will see the proposal count as 1 in the Group Inbox after Amit has forwarded the application. (Here, there are multiple MLPs—for example, MLP Bangalore will only see applications related to MLP Bangalore. This is controlled through user-level configurations.
+298. User: Riya Mehta selects the proposal to process.
+299. System Result: Proposal No. MSME/0071/202526 is automatically moved to Riya's individual Inbox.
+301. Proposal Forwarded by Another User
+302. Scenario: Amit directly forwards a proposal to Riya Mehta.
+303. Example:
+304. Amit’s Forward the application from the workflow and approval page to the Next Hierarchy and select Riya Mehta as user name to forward.
+305. When Riya Mehta will be able to process the application directly from the inbox.
+306. If the branch officer can view the status of the proposal by navigating to the existing proposal search. Branch officer needs to search the proposal by parameters like Name, date of proposal creation, proposal number and other parameters.
+308. Group Inbox
+309. System auto pushes the proposals directly assigned to the branch into the Group Inbox of branch. From the Group Inbox, the user can self-assign the proposal to work with. The self-assigned proposals will be pushed to the Inbox of the user.
+310. Example: -
+311. As per the BANK process, the MLP- In charge will allocate the application to user directly same can be configured, MLP In charge officer should go to the workflow and approval page and forward the application to the user.
+312. Self-Assigning the Proposals
+313. From the Group Inbox, the user can self-assign the proposal to work with. To self-assign the proposal, the user needs to click the corresponding Receive button. The popup window appears.
+314. On the popup window, the user can either click OK to receive the proposal in his inbox or click Cancel to cancel the action, as per his choice.
+315. Team Inbox
+316. The Team inbox is available only for the supervising authority. The Team Inbox allows the supervising authority to view the list of proposal pertaining to the group and the proposals of all the individual users belonging to the group.
+317. The Team Inbox is split into the following two sections.
+318. Reporting Users proposals – displays the proposals of all the individual users in a particular location.
+319. Reporting Group Proposals – displays all the proposals of the Group inbox.
+320. Existing Proposal Search
+321. On the left navigation bar, click Proposal Login and then click Existing Proposal Search to search for the existing proposal. The below screen appears. Here, you can search the proposal based on business-wise search, location-based search, or date-wise search. Search Parameter please refer to the grid below.
+322. Field Level validation
+325. Create Application and Other Integration
+326. Please find the attached common flow for creating the application
+328. Once the application is created, the user will be navigated directly to the application level.
+329. User has selected the ES Note, once associated product. Once the application is created system locks the ES Note and loads the application and user will not be able to change the ES Note in the application level.
+330. On clicking the Dedupe button, the system triggers an API call to the Core Banking System (CBS) to check for potential customer matches.
+331. If a match is found, the system displays the matched customer details along with their existing loan relationships.
+332. Based on the result, the user can either:
+333. Proceed with a fresh loan proposal, or
+334. Link the application to the existing loan and propose accordingly.
+335. Associated pages relevant to the locked scheme will be displayed for the user to fill in the required details.
+336. The user will not be allowed to change the requested loan amount once the application is initiated. Proposed loan amount can be modified but not greater the Requested amount.
+337. The Requested loan amount can be changed and within the applicable limit selected ES note.
+338. For All cases the user are not permitted change the ES note and if so then application and create new application.
+339. All ES Note validations will be built and executed based on the initially requested loan amount.
+340. Sanctioned loan amount will be final computed value after capturing the entire data touch points hence system could not assess the ES note type in the application level.
+341. Steps to Create Application.
+342. On click on the create new application from the Home screen a page will be enabled as shown below.
+343. User will need to fill the 3 sections from the screen.
+344. Sourcing Details
+345. Customer Details
+346. Existing and proposed exposure.
+348. Branch Officer-Initiated MSME Loan Application: Workflow Handling
+350. When a Branch Officer initiates an MSME loan application in LendPerfect LOS, the system evaluates the processing path at the time of application creation based on delegation powers.
+351. Workflow Logic:
+352. The system uses configured global variables to determine the appropriate processing level.
+353. The routing decision is based on:
+354. Requested Loan Amount
+355. Proposed Loan Amount
+356. These values are mapped against the delegation of powers matrix to decide whether the application should be:
+357. Processed at the Branch level, or
+358. Routed to MSME Loan Point (referred to as MLP)
+359. System Behavior:
+360. The routing logic is triggered immediately upon application creation, and the processing path is locked based on loan amount values.
+361. However, during the next workflow stage, the identified path can be forwarded to the next for further review, and the user may send the proposal to MLP even if it is currently at the Branch Manager review stage(During that stage, the user will have access to the full application and can complete the entire application before forwarding it to the next workflow, as configured in the system by the bank.)
+362. The system will dynamically enable or disable specific workflow roles based on the identified processing level during the application creation.
+363. Once the application is created and if user change the ES note which is selected during the application the application creation cannot be changed, once the application is created the associated attribute or modules which are required will be loaded and user cannot change. If user wants to change/modify they have rejected the application from the workflow and approval screen and recreate the application with proper ES note selection.
+364. Party Details
+365. This section enables users to capture customer-related information.
+366. Details of the individual pages under this section are explained in the respective subsections.
+367. Customer Details Page
+368. This screen enables users to capture the customer details, add co-borrower/Guarantor to the application along with the External API checks
+372. On clicking the 'Customer 360' button on the customer page, a popup window will be displayed listing the APIs based on the type of customer.
+373. This screen enables the user to add a new customer, whether individual or non-individual, for all participants in the proposal, such as:
+374. Applicant
+375. Co-applicant
+376. Guarantor
+377. This page allows users to add co-applicants or guarantors to the application at any point until the proposal reaches the "Sanction" state.
+378. Once the application is sanctioned, the system will restrict any further addition of co-applicants or guarantors.
+379. In exceptional (edge) cases where a co-applicant or guarantor needs to be added post-sanction, the user must initiate an "Undo Sanction" process.
+380. A dedicated workflow will be defined to manage this "Undo Sanction" operation.
+381. The enablement and scale of this feature will be confirmed by the bank. Process of same will be explained in detail in the workflow page.
+382. Multiple credit report options (CIBIL, CRIF, Experian) are available. When the 'Get Report' button is clicked:
+383. 1. The associated API is triggered to the respective CIC vendors.
+384. 2. The credit report is generated and displayed
+385. Scenario adding the co-applicant/guarantor who is Existing to Bank
+386. Users can click on the add new customer button on the customer detail bottom of the page as shown below.
+387. Upon clicking, a popup screen will appear, prompting the user to begin the customer addition process.
+388. Step 1: Check for Existing Relationship
+389. The user will be asked whether the customer has an existing relationship with BANK.
+390. If Yes, the system will prompt the user to enter the CIF ID.
+391. Step 2: Fetch Existing Customer Details
+392. The user must enter the Customer ID (CIF) and click the "Fetch" button.
+393. On Click on the Search icon associated next to the CIF ID field API will be triggered, if the API is successful, then the data will be auto populated in the customer details section as shown below.
+395. Before saving the customer detail section user needs to mandatorily select the type of borrower field and tag the relationship with the borrower. As shown below
+397. CIF Fetch Function
+398. User Actions
+399. User enters CIF Number and clicks on Retrieve
+400. Positive Scenarios
+401. Valid CIF number is entered
+402. Lendperfect fetches customer data from internal CBS
+403. System auto-fills all customer details
+404. Negative Scenarios
+405. CIF number is invalid or not mapped to customer.
+406. Internal system error during fetch.
+407. Any API failure user needs to re-try until success.
+408. Scenario for adding the co-applicant/guarantor who is ETB
+409. System will allow onboard the co-applicant and guarantor who is ETB.
+410. Scenario adding the co-applicant/guarantor who is NTB
+411. This functionality is on hold, and the Bank will confirm post internal discussions and approvals.
+412. Field Listing for Customer Details page
+413. Please find the attached field listing for Customer details page which will be used for development
+415. List of Directors
+416. This screen enables user to capture List of Directors/Partners/Trustee/Members manually.
+417. Screen Functionalities: -
+418. Users can capture details of directors, partners, trustees, or members by selecting a company from the list.
+419. Upon selecting a company, users can opt for 'Print on EB format,' leading to the printing of details in EB format.
+420. User can Generate the CIBIL report for Directors/Partners/Trustee/Members
+421. User can capture the CIBIL Scores of Company/Corporate Guarantor/Personal Guarantor
+422. Proposed Screen for List of Directors / Partners/ Trustee / Members
+424. Proposed Screen for CIBIL Score of Directors
+425. This Screen enables user to capture the CIBIL score and Details of Directors and other Promoters
+427. Proposed Screen for Corporate Guarantors
+428. This Screen enables user to capture the CIBIL score Corporate Guarantors
+431. Share Holding Pattern
+432. This screen allows users to capture the Capital Market Perception/Share Holding Pattern manually.
+433. Additional validation which needs to be performed by system.
+434. This Section is applicable below mentioned Customer Type and Constitution
+435. Type of Customer: Non- Individual
+436. Constitution: Partnership / Private Limited / Public Limited / Trusts / Limited Liability Partnership / OPC/HUF.
+437. If there are no non-individual customers attached to the application, the corresponding section of the EB format must be automatically filled with the term "Not applicable” ( Please refer to the EB format mapping document).
+438. There are 2 functionalities which can be provided.
+439. User to capture the required parameters manually.
+440. If the bank provides API, we can integrate and auto fetch the information.
+441. Note Field will be available as per the requirement of Page. Please refer to the field listing.
+443. Field Listing for Share Holding and Capital Market Perception
+445. Proposed Data Entry
+446. Existing Exposure with Our Bank
+447. This section is used to capture and maintain the details of all existing credit exposures of the applicant and associated parties (co-applicant, guarantors, group companies, sister concerns).
+448. The user will be able to fetch existing exposure with Our Bank by clicking the Fetch Liability button. This action will trigger an API call to the CBS to retrieve liability details. If the API call is successful, the liability details will be auto populated on the screen, including Existing Limit, Sanction Limit, Tenure, ROI, and other data retrieved from the API. The Bank is responsible for providing the API for this liability fetch.
+449. In case of API failure, the user must either retry fetching the liability details or enter the details manually.
+450. Additional Validations on the Screen:
+451. The user will only be allowed to propose MSME exposure if the customer already has exposure under other segments such as Retail (e.g., Home Loan).
+452. Only active accounts will be displayed under the existing limits section.
+453. We Suggest Treasury Exposure to be fetched here. But business team has requested in proposed exposure.
+457. Field Listing and Validation for the Existing Exposure with Our Bank
+458. Please find the attached field listing same will be considered for the development.
+460. Existing Exposure with Other Bank
+461. This screen enables the user to capture the applicant’s existing credit exposures with other financial institutions (other than <Bank Name>). It helps assess total liabilities and calculate accurate eligibility for new proposals.
+462. The data on this screen is automatically fetched from CIBIL, triggered via the Customer 360° page (accessed from the Customer Details section). While the option to manually add or delete records is available, only CIBIL-generated records will be considered for evaluation purposes.
+464. Field Listing for Existing Exposure with Other Bank
+465. Please find the attached field listing same will be considered for the development.
+467. Proposed Facility Details
+468. This section is designed to capture and define the details of the credit facilities proposed for the applicant. It enables the bank to configure loan product parameters, limits, and security classifications for the proposed sanction.
+469. During the Gap Session, the business team suggested that treasury and investment exposures should be considered while determining the DOP and should be included under the proposed exposure. These details will be entered manually by the user.
+470. We will be configuring products named "Treasury Exposure" and "Investment Exposure" in the master setup. At the application level, users will be able to add treasury exposure. Note that Treasury Exposure will not have any ROI or other related parameters.
+471. We also recommend that this should be considered part of Existing Facilities and integrated via API.
+473. Field Listing and Validation for the Proposed Exposure
+474. Please find the attached field listing same will be considered for the development.
+476. Document Details
+477. Documents Details tab allows you to capture the documents for the proposed proposal.
+478. View the list of documents required for the proposed proposal. The document list is pre-configured in the Setup module. Based on the Facility and category selected the documents list is populated.
+480. Field Listing and Validation for the Document details
+481. Please find the attached field listing same will be considered for the development.
+483. Security Detail
+484. This screen enables users to:
+485. Add a new security detail
+486. Attach security to a facility and map the security ownership to an applicant
+487. Add security to a facility as the primary, secondary or collateral security
+488. Upload and attach security-related document.
+489. The suggested formats for uploading security documents are PDF and Word; however, the system does not restrict other formats such as Excel and text. The size of each document is determined by the parameters allowed by the Bank DIT Team.
+491. On the Security Details pop-up, the user needs to select the security type, specify any existing charge, nature of the charge, insurance details, classification, security type, security value, net security, etc. The user can map the security to an applicant. Based on the security type selected, the field structure changes.
+492. Click Save, the new security details are saved in the LENDperfect database. The new security details display on the main screen.
+493. BD (Basic Details): The user needs to click BD to enter the Basic details of the security. It is mandatory to enter the basic details for security.
+495. OD (Other Details): The user needs to click OD to enter additional details of the security. It is optional to enter these details. For the Immovable type of Securities user can details out the fill the Valuation Report and Title Search Report.   User will be able to capture the Legal and Valuation other details section.
+498. Attach: Allows the user to map the security to the applicant and facility in the proposed proposal and create a type of lien on the security as primary or secondary. Upon attaching the security to a facility, the security attached status will display as Yes.
+500. Attach Documents: Allows the user to attach the technical and legal opinions against the security.
+501. Attached Securities: Allows the user to view the facilities attached to the proposal.
+502. Inspection form button
+503. On clicking the Valuation Request Form button, a popup screen will appear. The user must select the Valuer Name from the dropdown list. Upon clicking Submit, a Valuation Request Form will be triggered and sent to the configured valuer’s email address.
+504. This section will only be applicable for Security Valuation. (Only for Movable/Immovable type of Securities). Integration with Velocity will be explained upon the receipt of API Specifications. 
+
+(Note: The bank should provide the template and confirm whether this requirement is necessary.)
+506. Title Search Report Initiation request form button
+507. On clicking the Title Search Report Initiation Request Form button, a popup screen will appear. The user is required to select the lawyer's name from the dropdown list. On clicking Submit, a Title Search Report request will be triggered and sent to the configured lawyer’s email address. Integration with Adverse risk will be explained upon the receipt of API Specifications.
+(Note: The bank should provide the email template and confirm whether this requirement is needed.)
+509. Field Listing and Validation for Security Detail page
+510. Please find the attached field listing same will be considered for the development.
+512. Security Coverage
+513. The Security Coverage screen enables users to assess the security coverage provided by applicants for a specific proposal or application.
+515. Please find the security coverage calculation
+517. Functionalities
+518. Primary & Collateral Coverage:
+519. These are auto-populated values.
+520. The system calculates these based on securities attached in the Security Details page.
+521. Coverage is broken into:
+522. Primary Security: Typically direct security (e.g., hypothecation of stock).
+523. Collateral Security: Indirect or additional security (e.g., immovable property, third-party guarantee).
+524. Primary/Coverage (%): (Security Value / Proposed Limit) × 100
+525. Customer Coverage (%): Based on customer-contributed security share.
+526. Summarized section "Details of Security Proposed" for both Primary and Collateral.
+527. "Total Security Coverage" section calculates and displays consolidated figures:
+528. Primary Security Wise
+529. Collateral Security Wise
+530. Security Coverage (Primary + Collateral)
+531. Business Team to confirm on the logics.
+532. Value of account
+533. This screen empowers users to capture and manage the value of various financial activities, providing a comprehensive overview of the company's earnings. The data captured in this section includes details related to bills purchased/collected, LCs opened, BGs issued, other income (including processing charges/upfront fees), interest, and the total earnings for the present year and the previous year.
+534. We Suggest the Value of account can be fetched directly from the CBS, Bank needs to confirm the API availability.
+536. Field Listing and Validation for Value of account
+537. Please find the attached field listing same will be considered for the development.
+539. Business Updates
+540. This screen enables users to capture subjective information (Business and Company), which will be displayed in line with the header. The data entered in this section is intended solely for documentation purposes and will be printed on the ES Note.
+541. The entered information will not be used for any system functionality.
+542. There will be no validations or system-level processing on the input provided here.
+544. Note: Field listing is not attached, as the page is static in nature. An EK Editor will be provided for content configuration, and the header will be dynamically fetched from the setup configuration.
+545. Credit Updates
+546. This screen enables users to capture subjective information( Credit Related), which will be displayed in line with the header. The data entered in this section is intended solely for documentation purposes and will be printed on the ES Note.
+547. The entered information will not be used for any system functionality.
+548. There will be no validations or system-level processing on the input provided here.
+550. Note: Field listing is not attached, as the page is static in nature. An EK Editor will be provided for content configuration, and the header will be dynamically fetched from the setup configuration.
+551. Exposure Norms
+552. This screen enables users to capture the exposure norms. During the Gap Session, the business team deliberated that the master data for exposure ceilings should be integrated at the bank level. However, the required API and data touchpoints are to be provided by the bank team. Upon receipt, the same will be reviewed, and necessary changes can be incorporated through CR mode.
+556. Field Listing and Validation for Exposure Norms
+557. Please find the attached field listing same will be considered for the development.
+559. Personal and Corporate Guarantee
+560. This screen allows users to enter and maintain information pertaining to both personal and corporate guarantees provided as part of the loan proposal. The captured data supports risk assessment and compliance checks and will be considered during the sanction process.
+562. Field Listing and Validation for Personal and Corporate Guarantee
+563. Please find the attached field listing same will be considered for the development.
+565. Consortium and Share holding pattern of Loans
+566. This screen captures existing credit exposure and consortium shareholding for proposals involving <Bank Name> and other financial institutions under Multiple Banking Arrangement (MBA) or Consortium Lending structure.
+568. The proposed screen is below.
+569. Purpose
+570. To record the share of exposure held by <Bank Name> and other banks in an existing or proposed credit facility.
+571. To track and compare existing vs. proposed shareholding, covering both:
+572. Fund-Based (FB)
+573. Non-Fund-Based (NFB) components.
+574. To record Term Loan and Working Capital exposure individually under the sharing pattern.
+576. Shareholding Grid – Consortium/MBA
+578. Sharing Holding Pattern – Term Loan
+580. Sharing Holding Pattern – Working Capital
+583. Field Listing for MBA and Consortium Proposed Facility Details
+584. Please find the attached field listing which will be considered for development
+586. Evaluation of Industry
+587. This screen enables users to capture the evaluation of industry
+589. Field Listing is below
+591. Comments on Operation/Overdue
+592. This Screen enables users to capture the Comments on the Operations and Overdue.
+595. Field listing for the comments
+597. Group Company Operations
+598. This Screen enables users to capture the Gorup company operations with <Bank Name> and Proposed screen below, User needs to capture the details manually.
+600. Field Listing and Validation for the Group Company Operations
+602. Current Account with Other Bank
+603. This Screen allow the user to enter the current account details of the customer with other banks along with the remarks
+605. Field Listing for Current account with other bank.
+607. Financials
+608. Financial Indicator/Ratios
+609. CMA Format Selection:
+610. When a user initiates the CMA process in the CMA Input Screen, they are prompted to choose the applicable CMA format for the specific application.
+611. Automatic Population of Financial Indicators:
+612. Upon selecting the CMA format, the system automatically populates Financial Indicators based on the chosen format. The indicators are displayed year-wise, reflecting the financial health of the borrower over different periods.
+613. Dynamic Nature of Indicators:
+614. The Financial Indicators are dynamic, meaning their calculation is governed by formulas configured in the setup module by administrators. This dynamic nature allows for flexibility and adaptability to changing financial assessment criteria.
+615. Year-wise Display and Printing:
+616. The system presents Financial Indicators year-wise, and users have the autonomy to choose which year's indicators should be printed on the ES Format. This selective printing feature enhances customization for reporting and decision-making.
+617. Configuration in the Setup Module:
+618. Administrators have the authority to configure formulas for financial ratios and indicators in the setup module. This administrative control ensures that the calculation logic aligns with the specific requirements of each CMA format.
+619. User Flexibility and Control:
+620. CMA Format Choice:
+621. Users can choose the most appropriate CMA format for the application, aligning with the loan type or specific banking guidelines.
+622. Selective Printing Control:
+623. Users have the flexibility to decide which year's Financial Indicators should be included in the ES format. This allows for a more tailored and relevant presentation of financial information.
+624. Field Level Validation
+625. Financial Comments
+626. This screen enables the users to capture various required comments for the Financial Indicators.
+628. Group Company Financials
+629. Based on the Number of Group companies which is added in the customer detail page user can be able to add the financials against each company.
+631. Assessment
+632. Facility Based Assessment.
+633. Facility Assessment tab allows you to assess the proposal based on various input details in the proposed proposal and the predefined parameters in the setup module.
+634. The following are the assessment types available in the system.
+635. The following are the assessment types available in the system.
+636. FBF Method will be configured please refer to the attachment below.
+638. Turn Over Method will be configured please refer to the attachment below.
+640. Cash Budget Method will be configured please refer to the attachment below.
+642. Assessment of LC Inland will be configured please refer to the attachment below.
+645. Assessment of LC For Foreign will be configured please refer to the attachment below.
+647. Assessment of Bank Guarantee will be configured please refer to the attachment below.
+649. Any additional assessment which can be handled in manual assessment, User needs to enter manually under manual assessment section.
+651. Term Loan Assessment
+652. This screen enables the user to capture the Term Loan Assessment, facility-wise, based on both fresh and existing assessments. The screen dynamically updates based on the selected facility
+653. System will allow Multiple Term Loan Assessment and user needs to select the facility name from the dropdown loan
+655. Field Level Validation
+656. For Fresh Term loan
+658. For Review of Term Loan
+659. Manual Assessment
+660. This screen enables user to manually capture the assessment in the mode of ckeditor this screen is applicable for smaller loans.
+661. DSCR
+662. This screen enables users to view the DSCR for the facility, which is being assessed, bank shared DSCR will be configured.
+665. Rating
+666. This screen facilitates entry and comparison of internal and external credit ratings for both the Previous Year and Current Year. It enables accurate credit appraisal and compliance tracking by capturing critical rating-related data. The following functionalities are included.
+667. Integration with the ICON rating platform, will be discussed upon receipt of API specification availability.
+669. Field Listing for Internal Rating is below
+671. External Rating
+672. This Screen enables the user to capture the External rating.  Presently this screen is standalone, and the user needs to manually fill in the external rating.
+673. If API is provided, we can Integrate the External Rating.
+674. Please refer to the snapshot of proposed screen.
+676. Please refer to the below mentioned grid for field listing.
+677. Bank Need to confirm the Rating Agency (To provide the list of approved Agencies, Rating Category
+678. Rating Instrument)
+680. Score Card
+681. Based on business need we will deliver, MSME department to provide the Inputs
+683. Capital Cost
+684. This Screen enables the users to capture capital cost
+685. CAPITAL COST (Both FB & NFB)
+686. RAROC
+687. RAROC stands for Risk-Adjusted Return on Capital, and it is a financial metric used in the banking and financial industry to evaluate the profitability of a particular investment or business activity while considering the associated risks.
+688. As per the First Phase of SRS we will provide a RAROC as manual entry. Please refer to the fields below for the First Phase delivery
+689. RAROC Summary
+690. Verifications
+691. Due Diligence for Property
+692. The Due Diligence of Borrower and Property screen will allow users to capture and validate information related to the borrower's background and property details. This will ensure that all necessary verifications are performed before sanctioning a proposal.
+697. Field Listing and Validation for Due Diligence for Property
+698. A new screen will be introduced called due diligence of borrower.
+700. Due Diligence for Borrower
+701. A new screen will be introduced called due diligence of borrower. User needs to manually capture the inputs.
+705. Field Listing and Validation for Due Diligence for Borrower
+707. Pre Inspection Report
+708. Existing Screen to be considered for list of fields.
+715. Field Listing for Pre Inspection Report
+716. Field listing for Pre inspection Report
+718. Compliance
+719. This section enables users to capture the various compliance related to Proposal and Customer borrowing.
+720. General Compliances
+721. This screen enables the user to capture Yes/No variables for the ES Note, which are configured through the Annexure Setup. Please note that this screen has no system integration; the captured inputs are solely for printing on the ES Note
+723. Please note that the field listing is not attached, as this is a static page. The required fields will be configured from the Annexure Master within the application.
+724. Other Comments
+725. This section enables users to other comments for the ES note
+727. Query
+728. Query History
+729. Screen Functionality
+730. Query History tab allows you to view all the queries raised and resolved through the proposal processing stages. The following screen displays. View the queries and the corresponding replies to the queries raised by you and the other users. Click Edit to alter the queries raised by you before it is saved in the system
+731. Screen Design
+733. Raise Query
+734. Raise Query allows you to raise a new query upon other uses. Select the recipients, nature of the query, subject, priority, attach any supporting documents, enter a description of your concern. Click Add Query. The query queued to be raised and listed below the action buttons.
+735. Save as Draft: The queries saved as draft will not be visible to other users.
+736. Add Query: Click to add a new query. Your query will be visible to the other concerned users. These queries can be tracked below Query Inbox> Raised on the system home page.
+737. Remove Query: Select the query saved as a draft. Click Remove Query to permanently delete the query.
+738. Attachments: Attach relevant documents to your query.
+740. Decision Making
+741. Terms & Conditions
+742. The terms and conditions specific to the product and the general terms and conditions are pre-configured in the setup module. The screen displays the terms and conditions specific to the loan product selected.
+743. Adding new Terms and Condition
+744. The user can add new terms and conditions in addition to the existing terms and conditions.  The user must click  at the top left-hand side of the screen to add new terms and conditions. A popup window appears listing the terms and conditions.
+745. The user needs to select the checkbox corresponding to the terms and conditions and click Take it to the Product button. The selected terms and conditions are added to the Terms and conditions screen in the proposed loan application. The terms and conditions created in the application will apply only to the proposed application. Click the Save button to confirm.
+746. Adding User Defined Terms and Conditions
+747. In addition to the pre-configured terms and conditions, the user can also manually attach other terms and conditions at the time of application creation. In this scenario, the user needs to select Draft from the popup window and then click Take it to the Product button. The terms and conditions get attached as a draft. However, it is editable. The user can rename the terms and conditions.
+748. Terms and conditions are configurable by bank team. We will map according to the requirements.
+749. The terms and conditions attached in the application will be applied only to the proposed application
+751. Adding Proposal Specific Terms and Conditions
+752. The user can add new terms and conditions by clicking at the top left-hand side of the screen. A popup window appears listing the terms and conditions.
+753. The user needs to select the checkbox corresponding to the terms and conditions and click Take it to the Product button. The selected terms and conditions are added to the Terms and conditions screen in the proposed loan application. Click the Save button to confirm.
+754. Adding New Terms and Conditions
+755. In addition to the pre-configured terms and conditions, the user can also manually attach other terms and conditions at the time of recommendation.
+756. At the Facility Specific and Branch Specific terms & conditions, the user needs to click  at the top left-hand side of the screen to add new terms and conditions. A popup window appears listing the terms and conditions.
+757. Select the checkbox corresponding to the terms and conditions to be attached to the proposal and then click the Take it to the Product button. The selected terms and conditions are added to the Terms and conditions screen in the proposed loan application. The terms and conditions created in the application will apply only to the proposed application.
+758. Pricing/Business Approval
+759. This screen enables users to capture the concession on the Interest, processing fee, Commission and any other fee which are requested for concession.
+760. Interest, Processing Fee, Commission, and Other Fees: Ensure that users can only enter valid numbers (System will allow user to capture the value of concession places).
+761. Existing Rate: The system will refer to the interest rate, if any, from the "Existing Exposure with <Bank Name> Bank" page.
+762. Card Rate: The system will refer to the configured rate for the facility (this is derived from the setup).
+763. Concession: The user needs to enter the concession proposed for each facility.
+764. Proposed Change %: This is a system-calculated field. The system will calculate the proposed percentage based on the difference between the card rate and the concession requested.
+765. Proposed Processing Charge: This is an auto-calculated field. Card rate – Concession = Proposed Processing Charge.
+767. Field Listing and Validation for pricing page/business approval
+768. Please find the attached field listing same will be considered for the development.
+769. Deviation
+770. The Deviation Tracking screen allows the user to manage the product/user defined deviations while processing the loan application, starting from raising the deviation through deviation approval.
+771. The following two types of deviation can be handled in this screen.
+772. User Defined Deviation
+773. Product Defined Deviation
+775. User Defined Deviation
+776. The user defined deviations are that which are manually raised by the user on this screen. The Add New Deviation button allows the user to raise multiple deviations as required. Remarks field is mandatory to save the Deviation Tracking screen.
+777. Product Defined Deviation
+778. The product defined deviations are automatically raised by the system if any of the input parameter breaches from the Product Eligibility guidelines/rules or the setup benchmark. The system displays the deviated parameter and the corresponding minimum approving authority on this screen.
+779. The user needs to click Edit and then select the User from the drop-down and type the Remarks.
+780. Request for Deviation Approval
+781. The minimum approving authority will be automatically displayed for the raised deviation. The underwriter needs to enter the recommendation Remarks and click Save. The user needs to forward the proposal by navigating to Workflow & Approval screen. In the Workflow & Approval screen, select the respective deviation flow point and select the user from the Next Workflow and To User/Group drop-down and send the proposal to the respective approving authority.
+782. Approving Authority Flow
+783. From the Group Inbox, the approving authority can pick the proposal for approving the deviations. In this stage, the entire proposal will be in the read-only mode except the Approval Status dropdown on the Deviation Tracking screen.
+784. The approving authority can review the deviation, approve/reject the deviation by selecting the respective value from the Approval Status dropdown, and click Save.
+785. After approving the deviation, the approver needs to send back the proposal by navigating to Workflow & Approval screen. In the Workflow & Approval screen, select the next workflow point and the respective user group and send the application to process further.
+786. Proposal Recommendation
+787. The Proposal Recommendation screen allows the authorized user to recommend the proposal for sanction.
+788. On this screen, the system displays the Requested Loan Amount, Recommended Amount, Concession Recommended ,ROI and Tenor text boxes.
+789. Upon clicking the Edit Recommendation Values button, certain fields whichever applicable becomes editable in the Recommendation table. When the recommending authority is modifying the recommended amount then the sanction amount will also get updated.
+790. Once the proposal is forwarded to the approving authority, the approving authority will review the proposal and change the Sanction Amount if necessary.
+792. Validation
+793. The recommended amount should not breach the loan amount requested.
+794. In both the above cases, the loan cannot be sanctioned until the deviation is approved by the approving authority concerned. It is limitation, We will come back upon discussion with our product team.
+795. For sanctioning authority, the sanction amount can’t be greater than recommended amount and less than loan amount.,
+796. For the Sanctioning authority, final sanction amount cannot exceed the recommended amount.
+797. Based on the recommended amount, the system automatically displays the respective approving authority groups in the Approving Authority dropdown. The user can choose other appropriate approving authority groups which is higher than the minimum approving authority displayed based on the proposal condition and enter the recommended remarks in the Recommended Remarks text area by clicking the Add Recommendation Comments button.
+798. The user can also edit the recommended remarks when required by selecting the user’s name in the table below and click the Edit Recommendation Remarks button.
+799. The user can edit only their remarks until the proposal is within their inbox. Once the proposal is forwarded to the next workflow, the system will restrict the user from editing the recommendation remarks.
+800. System will identify the Actual DOA based on the application captured data, as per the DOA which is shared, we have identified the below mentioned global variable for deriving the DOA.
+801. Sanction Letter Preparation
+802. Screen Functionality
+803. The SL Preparation screen allows the user to create the Sanction Letter.
+804. The Template field (CKEditor) auto-loads pre-filled content.
+805. The pre-filled content is dynamically fetched from a Template Setup Master configured in the backend or admin panel.
+806. Based on the Proposal No. Applicant Name, or Product Type, the corresponding sanction letter template is selected.
+807. The user can:
+808. View and modify the contents before finalizing.
+809. Add remarks, loan terms, or approval conditions if needed.
+812. Sanction Letter Generation
+813. Screen Functionality
+814. The SL Generation screen allows the user to view the Sanction Letter and the annexure to the Sanction Letter. On this screen,
+815. The SL Generation screen allows the user to view the final sanction letter for the primary borrower attached to the proposal.
+817. The user can view the Sanction letter details for the selected proposal. The user must click the SL Generation button to view the Sanction letter for the proposed proposal in a pop-up window.
+818. Upon approval of a proposal, the “Edit” and “Save” buttons on the SL Generation screen will be disabled.
+819. Workflow & Approval
+820. Screen Functionality
+821. The Workflow & Approval screen allows the user to track the workflow for recommendation/approval.
+823. List of mandatory pages – displays the list of mandatory pages preconfigured against workflow. If mandatory screen is completed, a green tick mark will be shown beside the page name. Else a red cross mark will be shown.
+824. Note: In case if any of the mandatory screen is incomplete, the system will restrict the user from forwarding the application to the next stage.
+825. To forward the proposal to the approving authority, the user needs to select the workflow of the approving authority and the approving authority/group from the respective dropdowns, and then click Send. The proposal is forwarded to the Group Inbox or the approving authority inbox based on the selection in the To user/group dropdown.
+826. Once the approving authority receives the proposal from the user, the approving authority can either approve, reject, withdraw, or undo the proposal by clicking the respective buttons on this screen.
+827. While approving, the approver can give comments. The comments section is editable only for approver.
+828. Note: The Approve, Reject, and Undo buttons are enabled only for the approving authority.
+829. Undo – The approving authority needs to click this button to send back the proposal to the previous workflow. Once the proposal is sent back, the user can revisit the sanction condition and sanction amount. Once the proposal is sent back, the entire proposal becomes editable.
+830. In this scenario, if any of the assessment and score related parameters gets changed, the eligibility should be revisited and re-sanctioned with revised parameters and data.
+831. Withdraw – The button available at all levels. Upon clicked, the proposal will be removed from the processing inbox. However, it can be searched in the existing proposal search. In this scenario, the proposal will be in read only mode.
+832. Process:
+833. To forward the proposal, the user needs to select the workflow and user from the Next Workflow and To User/Group drop-down, respectively, enter the comments in the Approve/Reject/Withdraw Comments text box, and then click Send. The proposal is forwarded to the repective workflow either to the Inbox of the selected user or the group. This process is common to forward the proposal for recommendation, for sanction, for deviation, and to send back.
+834. Fort the proposal which needs to be sent to the committee( Will have sepearte Screen forApproval), as per the delegation powers of the bank will be complied and configured in the system.
+835. If the DOA is CAC then the consise note will be generated, and user needs to add the subjective information in the Business updates,Same way for ES 18 and E19s.
+837. The application will verify DOP of the proposal if matching then the Approve button will be enabled. Once the proposal is approved, then the Approve, Reject and Withdraw button will be disabled and Undo button will be enabled. The sanctioning authority will be automatically enabled based on the DOP shared.
+838. Validation :
+839. Sanctioning Authority :
+840. Workflow History
+841. The Workflow History screen allows the user to view the completed workflow points with the comments entered by various users along with the time stamp.
+843. Post Sanction Documentation
+844. This screen enables users to add post sanction documentation
+846. Post Sanction Documentation Flow
+847. Proposed Solution for Post Sanction Documentation Flow. Detailed information is explained in the Manual Documents and DDE
+851. Annexure will be provided since documentation across platforms is common.
+852. Account Handoff
+853. Once the proposal is approved by the sanctioning authority, the user can visit account handoff page to create a unique loan account number for the proposal in the CBS. Once the loan account is created in CBS, it will be updated in the LENDperfect system automatically. The loan account number is auto populated on the relevant field on the MIS details screen as well as the Disbursement Schedule screen.
+854. Sample screenshot is attached below:
+856. CGTMSE coverage. New Button will be introduced in the Account Hand off screen called Push data to CGTMSE. This button will be enables once the account loan account is created.
